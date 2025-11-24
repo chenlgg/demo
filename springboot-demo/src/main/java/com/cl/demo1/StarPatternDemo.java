@@ -38,4 +38,24 @@ public class StarPatternDemo {
             System.out.println(line.toString());
         }
     }
+
+    public static void main1(String[] args) {
+        int size = 13; // 图案宽度和总高度
+        int mid = size / 2; // 中间行索引 = 6
+
+        for (int row = 0; row < size; row++) {
+            StringBuilder line = new StringBuilder();
+
+            if (row == 0 || row == mid || row == size - 1) {
+                // 第0行、中间行、最后一行：全星
+                for (int i = 0; i < size; i++) {
+                    line.append('*');
+                }
+            } else {
+                // 其他行：根据算法生成
+                int upperRow = row < mid ? row : size - 1 - row; // 对称映射：下半部分映射到上半部分
+            }
+        }
+    }
+
 }
